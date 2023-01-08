@@ -34,8 +34,9 @@ def ascii_text(orig):
 def ascii_filename(orig, substitute='_'):
     if isinstance(substitute, bytes):
         substitute = substitute.decode(filesystem_encoding)
-    orig = ascii_text(orig).replace('?', '_')
-    ans = ''.join(x if ord(x) >= 32 else substitute for x in orig)
+    # orig = ascii_text(orig).replace('?', '_')
+    # ans = ''.join(x if ord(x) >= 32 else substitute for x in orig)
+    ans = orig  # utf-8 instead!
     return sanitize_file_name(ans, substitute=substitute)
 
 

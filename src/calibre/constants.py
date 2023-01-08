@@ -4,7 +4,7 @@ from polyglot.builtins import environ_item, hasenv
 from functools import lru_cache
 import sys, locale, codecs, os, collections, collections.abc
 
-__appname__   = 'calibre'
+__appname__   = 'calibre-zh'
 numeric_version = (6, 11, 0)
 __version__   = '.'.join(map(str, numeric_version))
 git_version   = None
