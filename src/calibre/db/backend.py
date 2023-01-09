@@ -1368,7 +1368,8 @@ class DB:
         title  = ascii_filename(title.lstrip())[:l].rstrip()
         if not title:
             title = 'Unknown'[:l]
-        name   = title + ' - ' + author
+        # name   = title + ' - ' + author
+        name = title
         while name.endswith('.'):
             name = name[:-1]
         if not name:

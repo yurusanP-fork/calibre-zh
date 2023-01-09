@@ -627,7 +627,8 @@ class LibraryDatabase2(LibraryDatabase, SchemaUpgrade, CustomColumns):
                     )[:self.PATH_LIMIT]
         title  = ascii_filename(self.title(id, index_is_id=True)
                     )[:self.PATH_LIMIT]
-        name   = title + ' - ' + author
+        # name   = title + ' - ' + author
+        name = title
         while name.endswith('.'):
             name = name[:-1]
         return name
